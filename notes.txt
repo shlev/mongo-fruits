@@ -1,0 +1,43 @@
+/* mongo */
+- delete db
+use <db>
+db.dropDatabase()
+
+
+npm i mongoose
+
+//connect
+mongoose.connect(`${url}/${dbName}`, {useNewUrlParser: true, useUnifiedTopology: true});
+
+- create Schema
+- link schema to model name capitalized&single (mongoose will make it plural)
+
+// save object
+const person = new Person({
+            name: "John",
+            score: 8
+        });
+
+person.save();
+
+- save group of objects
+<db>.insertMany([<collection of objects>])
+
+mongoose.connection.close();
+
+
+-validate schema values
+const schema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, "Please check your data entry no name specified" ]
+    score: {
+        type: Number,
+        min: 1,
+        max: 10
+    }
+    review: String
+});
+
+
+
