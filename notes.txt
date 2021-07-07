@@ -40,4 +40,11 @@ const schema = new mongoose.Schema({
 });
 
 
+//Find
+<Object>.find({options}, callback);
+
+example:
+Fruit.find({}, function(err, fruits)) -> finds all Fruits.
+
+
 

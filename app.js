@@ -113,7 +113,7 @@ const Person = mongoose.model("People", peopleSchema);
 //         })
 // }
 
-// Fruit.find(function (err, fruits) {
+// Fruit.find({}, function (err, fruits) {
 //     if ( err ) {
 //         console.log(err);
 //     } else {
